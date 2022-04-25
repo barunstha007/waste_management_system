@@ -74,7 +74,7 @@
                 <a class="nav-link" href="about.html">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="doctors.html">Doctors</a>
+                <a class="nav-link" href="truck.html">Trucks</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="blog.html">News</a>
@@ -180,7 +180,7 @@
     </div> <!-- .bg-light -->
   </div> <!-- .bg-light -->
 
-  @include('user.doctor')
+  @include('user.truck')
 
   <div class="page-section bg-light">
     <div class="container">

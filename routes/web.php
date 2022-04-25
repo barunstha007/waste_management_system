@@ -19,10 +19,13 @@ use App\Http\Controllers\AdminController;
 //Home Controller
 
 Route::get('/',[HomeController::class,'index']);
-Route::get('/home',[HomeController::class,'redirect']);
+Route::get('/home',[HomeController::class,'redirect'])->middleware('auth','verified');
 Route::post('/pickup',[HomeController::class,'pickup']);
 Route::get('/myappointment',[HomeController::class,'myappointment']);
 Route::get('/cancel_appoint/{id}',[HomeController::class,'cancel_appoint']);
+Route::get('/userfeedback',[HomeController::class,'userfeedback']);
+Route::post('/feedback',[HomeController::class,'feedback']);
+
 
 Route::middleware([
     'auth:sanctum',
@@ -45,7 +48,15 @@ Route::get('/showtruck',[AdminController::class,'showtruck']);
 
 
 Route::get('/deletetruck/{id}',[AdminController::class,'deletetruck']);
-Route::get('/updatetruck',[AdminController::class,'updatetruck']);
+Route::get('/updatetruck/{id}',[AdminController::class,'updatetruck']);
+Route::post('/edittruck/{id}',[AdminController::class,'edittruck']);
+Route::get('/emailview/{id}',[AdminController::class,'emailview']);
+Route::post('/sendemail/{id}',[AdminController::class,'sendemail']);
+Route::get('/showfeedback',[AdminController::class,'showfeedback']);
+
+
+
+
 
 
 

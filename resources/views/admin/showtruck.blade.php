@@ -35,7 +35,7 @@
                         <td>{{ $truck->dnumber }}</td>
                         <td><img height="100" width="100" src="truckimage/{{ $truck->image}}" alt=""></td >
                         <td> <a onclick="return confirm('are you sure you want to delete this')" class="btn btn-danger" href="{{ url('deletetruck',$truck->id) }}">Delete</a></td>
-                        <td> <a class="btn btn-primary" href="{{ url('updatetruck') }}">Update</a></td>
+                        <td> <a class="btn btn-primary" href="{{ url('updatetruck',$truck->id )}} ">Update</a></td>
 
                     </tr>
                     @endforeach

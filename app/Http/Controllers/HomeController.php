@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Truck;
 use App\Models\Pickup;
+use App\Models\Feedback;
+
 
 
 
@@ -83,4 +85,30 @@ class HomeController extends Controller
         $data->delete();
         return redirect()->back();
     }
+
+    public function userfeedback(Request $request)
+    {
+
+        return view ('user.user_feedback');
+
+    }
+
+    public function feedback(Request $request)
+    {
+        $data = new feedback;
+        $data->name = $request->name;
+        $data->email = $request->email;
+        $data->message = $request->message;
+
+        if(Auth::id())
+        {
+            $data->user_id= Auth::user()->id;
+        }
+
+        $data->save();
+        return redirect()->back()->with('message', 'Feedback has been Successfully sent');
+
+    }
+
+
 }
