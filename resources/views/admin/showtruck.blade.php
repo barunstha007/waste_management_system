@@ -28,7 +28,7 @@
                     </tr>
                     @foreach ($data as $truck )
 
-                    <tr align="center" style="background-color:skyblue">
+                    <tr align="center" style="background-color:black">
                         <td>{{ $truck->name }}</td>
                         <td>{{ $truck->number }}</td>
                         <td>{{ $truck->capacity }}</td>

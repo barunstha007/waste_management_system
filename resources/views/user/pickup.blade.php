@@ -45,8 +45,8 @@
                     <textarea name="message" id="message" class="form-control" rows="6" placeholder="Brief description of waste to be removed"></textarea>
                 </div>
                 <div style="padding:15px;">
-                    <label for="">Upload a picture of the waste(optional)</label>
-                    <input type="file" name="file" >
+                    <label for="">Upload a picture of the waste</label>
+                    <input type="file" name="file" required>
                 </div>
             </div>
             <div class="col-12 text-center mt-4 " >

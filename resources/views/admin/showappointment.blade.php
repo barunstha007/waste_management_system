@@ -35,8 +35,7 @@
                 </tr>
                 @foreach ($data as $appoint )
 
-                @endforeach
-                <tr align="center" style="background-color:skyblue">
+                <tr align="center" style="background-color:black">
                     <td>{{ $appoint->fname }}</td>
                     <td>{{ $appoint->lname }}</td>
                     <td>{{ $appoint->email }}</td>
@@ -56,6 +55,8 @@
                         <a class="btn btn-primary" href="{{ url('emailview',$appoint->id) }}">Send Mail</a>
                     </td>
                 </tr>
+                @endforeach
+
             </table>
         </div>
 

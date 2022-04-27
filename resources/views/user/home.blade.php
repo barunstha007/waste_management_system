@@ -25,90 +25,7 @@
   <!-- Back to top button -->
   <div class="back-to-top"></div>
 
-  <header>
-    <div class="topbar">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-8 text-sm">
-            <div class="site-info">
-              <a href="#"><span class="mai-call text-primary"></span> +00 123 4455 6666</a>
-              <span class="divider">|</span>
-              <a href="#"><span class="mai-mail text-primary"></span> mail@example.com</a>
-            </div>
-          </div>
-          <div class="col-sm-4 text-right text-sm">
-            <div class="social-mini-button">
-              <a href="#"><span class="mai-logo-facebook-f"></span></a>
-              <a href="#"><span class="mai-logo-twitter"></span></a>
-              <a href="#"><span class="mai-logo-dribbble"></span></a>
-              <a href="#"><span class="mai-logo-instagram"></span></a>
-            </div>
-          </div>
-        </div> <!-- .row -->
-      </div> <!-- .container -->
-    </div> <!-- .topbar -->
-
-    <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
-        <div class="container">
-          <a class="navbar-brand" href="#"><span class="text-primary">One</span>-Health</a>
-
-          <form action="#">
-            <div class="input-group input-navbar">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="icon-addon1"><span class="mai-search"></span></span>
-              </div>
-              <input type="text" class="form-control" placeholder="Enter keyword.." aria-label="Username" aria-describedby="icon-addon1">
-            </div>
-          </form>
-
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport" aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupport">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="truck.html">Trucks</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="blog.html">News</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-
-              @if(Route::has('login'))
-              @auth
-              <li class="nav-item">
-                <a class="nav-link" style="background-color:rgb(0, 255, 234); color:black" href="{{ url('myappointment') }}">My Appointment</a>
-              </li>
-              <x-app-layout>
-              </x-app-layout>
-
-              @else
-
-              <li class="nav-item">
-                <a class="btn btn-primary ml-lg-3" href="{{ route('login') }}">Login </a>
-              </li>
-
-              <li class="nav-item">
-                  <a class="btn btn-primary ml-lg-3" href="{{ route('register') }}"> Register</a>
-                </li>
-              @endauth
-              @endif
-
-            </ul>
-          </div> <!-- .navbar-collapse -->
-        </div> <!-- .container -->
-      </nav>
-
-  </header>
+ @include('layouts.header')
 
   @if(session()->has('message'))
             <div x-data="{show: true}" x-init="setTimeout(() => show = false, 3000)" x-show="show">
@@ -119,12 +36,12 @@
             </div>
 
             @endif
-  <div class="page-hero bg-image overlay-dark" style="background-image: url(../assets/img/bg_image_1.jpg);">
+  <div class="page-hero bg-image overlay-dark" style="background-image: url(../assets/img/banner-main.jpg);">
     <div class="hero-section">
       <div class="container text-center wow zoomIn">
-        <span class="subhead">Let's make your life happier</span>
-        <h1 class="display-4">Healthy Living</h1>
-        <a href="#" class="btn btn-primary">Let's Consult</a>
+        <span class="subhead">We can solve your corporate IT disposition needs quickly and professionally.</span>
+        <h1 class="display-4">Save Your community, Save Your planet</h1>
+        <a href="{{ url('showpickup') }}" class="btn btn-primary">Request a Pickup</a>
       </div>
     </div>
   </div>
@@ -139,7 +56,7 @@
               <div class="circle-shape bg-secondary text-white">
                 <span class="mai-chatbubbles-outline"></span>
               </div>
-              <p><span>Chat</span> with a doctors</p>
+              <p><span>Chat</span> with waste concern</p>
             </div>
           </div>
           <div class="col-md-4 py-3 py-md-0">
@@ -166,13 +83,15 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6 py-3 wow fadeInUp">
-            <h1>Welcome to Your Health <br> Center</h1>
-            <p class="text-grey mb-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Accusantium aperiam earum ipsa eius, inventore nemo labore eaque porro consequatur ex aspernatur. Explicabo, excepturi accusantium! Placeat voluptates esse ut optio facilis!</p>
-            <a href="about.html" class="btn btn-primary">Learn More</a>
+            <h1>Awarness of  <br>Waste Managment</h1>
+            <p class="text-grey mb-4">Waste management (or waste disposal) includes the processes and actions required to manage waste from its inception to its final disposal. This includes the collection, transport, treatment and disposal of waste, together with monitoring and regulation of the waste management process and waste-related laws, technologies, economic mechanisms.
+
+            Waste can be solid, liquid, or gaseous and each type has different methods of disposal and management. Waste management deals with all types of waste, including industrial, biological, household, municipal, organic, biomedical, radioactive wastes. In some cases, waste can pose a threat to human health.Health issues are associated throughout the entire process of waste management. Health issues can also arise indirectly or directly.</p>
+            <a href="{{ url('lesson') }}" class="btn btn-primary">Learn More</a>
           </div>
           <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
             <div class="img-place custom-img-1">
-              <img src="../assets/img/bg-doctor.png" alt="">
+              <img src="../assets/img/garbageman.png" alt="">
             </div>
           </div>
         </div>
@@ -182,7 +101,7 @@
 
   @include('user.truck')
 
-  <div class="page-section bg-light">
+  {{-- <div class="page-section bg-light">
     <div class="container">
       <h1 class="text-center wow fadeInUp">Latest News</h1>
       <div class="row mt-5">
@@ -265,7 +184,7 @@
 
       </div>
     </div>
-  </div> <!-- .page-section -->
+  </div> <!-- .page-section --> --}}
 
   @include('user.pickup')
 

@@ -21,14 +21,11 @@
                     <th style="padding: 10px">Full Name</th>
                     <th style="padding: 10px">Email</th>
                     <th style="padding: 10px">Message</th>
-
-
-
                 </tr>
                 @foreach ($data as $feedback )
 
                 @endforeach
-                <tr align="center" style="background-color:skyblue">
+                <tr align="center" style="background-color:black">
                     <td>{{ $feedback->name }}</td>
                     <td>{{ $feedback->email }}</td>
                     <td>{{ $feedback->message }}</td>

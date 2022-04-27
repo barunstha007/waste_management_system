@@ -8,6 +8,11 @@
             display: inline-block;
             width: 200px;
         }
+        /* .container{
+            border:5px solid #FFF00;
+            display:flex;
+            justify-content
+        } */
       </style>
    @include('admin.css')
   </head>
@@ -20,7 +25,6 @@
         <!-- partial:partials/_navbar.html -->
        @include('admin.navbar')
         <!-- partial -->
-      <div class="container-fluid page-body-wrapper">
 
 
 

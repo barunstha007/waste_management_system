@@ -110,5 +110,22 @@ class HomeController extends Controller
 
     }
 
+    public function aboutus()
+    {
+        return view('user.aboutus');
+    }
+
+    public function lesson()
+    {
+        return view('user.lesson');
+    }
+
+    public function showpickup()
+    {
+        $truck = truck::all();
+        return view('user.showpickup',compact('truck'))->with('message', 'Garbage Pickup Request Successful. We will contact you soon');
+    }
+
+
 
 }

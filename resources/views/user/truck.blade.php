@@ -8,7 +8,7 @@
         <div class="item">
           <div class="card-doctor">
             <div class="header">
-              <img style="height: 300px !important" src="truckimage/{{ $trucks->image }}" alt="">
+              <img style="height: 300px !important; object-fit: cover" src="truckimage/{{ $trucks->image }}" alt="">
               <div class="meta">
                 <a href="#"><span class="mai-call"></span></a>
                 <a href="#"><span class="mai-logo-whatsapp"></span></a>

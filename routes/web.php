@@ -25,6 +25,11 @@ Route::get('/myappointment',[HomeController::class,'myappointment']);
 Route::get('/cancel_appoint/{id}',[HomeController::class,'cancel_appoint']);
 Route::get('/userfeedback',[HomeController::class,'userfeedback']);
 Route::post('/feedback',[HomeController::class,'feedback']);
+Route::get('/aboutus',[HomeController::class,'aboutus']);
+Route::get('/lesson',[HomeController::class,'lesson']);
+Route::get('/showpickup',[HomeController::class,'showpickup']);
+
+
 
 
 Route::middleware([
